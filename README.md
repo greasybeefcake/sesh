@@ -52,9 +52,10 @@ pip install discord.py pandas python-dotenv xlsxwriter
 
 #### Create `.env` file:
 
-env
 DISCORD_TOKEN=your_bot_token_here
 GUILD_ID=your_server_id_here
+CSV_PATH=path/to/your/sesh_export.csv
+OUTPUT_DIR=path/to/your/output/directory
 
 #### Create `member_audit.py`:
 [Copy the entire script provided separately]
@@ -187,9 +188,10 @@ username2,,
 ## Quick Reference
 
 ### Environment Variables
-env
-DISCORD_TOKEN=your_bot_token
-GUILD_ID=your_server_id
+DISCORD_TOKEN=your_bot_token_here
+GUILD_ID=your_server_id_here
+CSV_PATH=path/to/your/sesh_export.csv
+OUTPUT_DIR=path/to/your/output/directory
 
 ### Required Permissions
 - Read Messages/View Channels

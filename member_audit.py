@@ -31,7 +31,8 @@ class MemberAudit(commands.Bot):
 
     def export_results(self, all_members: Dict, sesh_responses: Dict):
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_path = r"C:\Users\Will\Desktop\Projects\sesh\audit_results_{}.xlsx".format(timestamp)
+        output_dir = os.getenv('OUTPUT_DIR', os.getcwd())  # Fallback to current directory if not set
+        output_path = os.path.join(output_dir, f"audit_results_{timestamp}.xlsx")
         
         results_data = []
         
@@ -107,8 +108,12 @@ class MemberAudit(commands.Bot):
         print("Beginning audit process...")
         
         GUILD_ID = int(os.getenv('GUILD_ID'))
-        CSV_PATH = r"C:\Users\Will\Desktop\Projects\sesh\sesh_export.csv"
+        CSV_PATH = os.getenv('CSV_PATH')
 
+        if not CSV_PATH:
+            print("Error: CSV path not found in environment variables")
+            return
+        
         print(f"Looking for guild ID: {GUILD_ID}")
         guild = self.get_guild(GUILD_ID)
         
