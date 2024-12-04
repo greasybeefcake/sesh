@@ -209,6 +209,11 @@ OUTPUT_DIR=path/to/your/output/directory
 
 ### Command Line
 
+bash
+
+Install dependencies
+pip install discord.py pandas python-dotenv xlsxwriter
+
 ## Maintenance
 
 ### Regular Checks
