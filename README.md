@@ -32,9 +32,10 @@ pip install discord.py pandas python-dotenv xlsxwriter
    - `bot`
    - `applications.commands`
 3. Select bot permissions:
-   - Read Messages/View Channels
+   - View Channels
    - Read Message History
-   - View Server Members
+   - View Server Insights
+   - Moderate Members
 4. Copy generated URL
 5. Open URL in browser
 6. Select your server and authorize
@@ -64,7 +65,7 @@ OUTPUT_DIR=path/to/your/output/directory
 
 ### 6. Export Sesh Responses
 1. Go to your Sesh event in Discord
-2. Use Sesh's export command
+2. Use Sesh's export csv button
 3. Save as `sesh_export.csv` in project directory
 
 ## Running the Bot
@@ -85,7 +86,7 @@ The bot will:
 ## Excel Report Format
 
 The report includes:
-- Display Name: Server nickname/username
+- Display Name: Server displayname/username
 - Sesh Response: Yes/Maybe/No/No Response
 
 Color coding:
